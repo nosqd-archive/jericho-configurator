@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иерихон</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 16px;
+        }
+        #chestui {
+            display: grid;
+            grid-template-columns: repeat(9, calc(128px + 8px));
+            grid-template-rows: repeat(3, calc(128px + 8px));
+        }
+
+        .item {
+            width: 128px;
+            height: 128px;
+            border: 1px solid red;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 18px;
+            font-weight: 1000;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Иерихон</h1>
+        <table border="1" class="table table-dark">
+            <thead>
+                <tr>
+                    <th>West</th>
+                    <th>North</th>
+                    <th>East</th>
+                    <th>South</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="west-enabled"></td>
+                    <td><input type="checkbox" id="north-enabled"></td>
+                    <td><input type="checkbox" id="east-enabled"></td>
+                    <td><input type="checkbox" id="south-enabled"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="x111" id="west-111" class="form-control"></td>
+                    <td><input type="text" placeholder="x111" id="north-111" class="form-control"></td>
+                    <td><input type="text" placeholder="x111" id="east-111" class="form-control"></td>
+                    <td><input type="text" placeholder="x111" id="south-111" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="x16" id="west-16" class="form-control"></td>
+                    <td><input type="text" placeholder="x16" id="north-16" class="form-control"></td>
+                    <td><input type="text" placeholder="x16" id="east-16" class="form-control"></td>
+                    <td><input type="text" placeholder="x16" id="south-16" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="x1" id="west-1" class="form-control"></td>
+                    <td><input type="text" placeholder="x1" id="north-1" class="form-control"></td>
+                    <td><input type="text" placeholder="x1" id="east-1" class="form-control"></td>
+                    <td><input type="text" placeholder="x1" id="south-1" class="form-control"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <hr>
+    <div>
+        <div id="chestui">
+            <p class="item"></p>
+
+            <p class="item" id="out-north-111"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/block/cobblestone.png); background-repeat: no-repeat; background-size: cover;">
+                NORTH x111</p>
+            <p class="item"></p>
+            <p class="item"></p>
+            <p class="item" id="out-north-16"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                NORTH x16 </p>
+            <p class="item"></p>
+            <p class="item"></p>
+            <p class="item" id="out-north-1"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                NORTH x1</p>
+                <p class="item"></p>
+
+
+            <p class="item" id="out-west-111"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/block/cobblestone.png); background-repeat: no-repeat; background-size: cover;">
+                WEST x111</p>
+            <p class="item"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/block/cobblestone.png); background-repeat: no-repeat; background-size: cover;">
+                PAYLOAD_SIZE</p>
+            <p class="item" id="out-east-111"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/block/cobblestone.png); background-repeat: no-repeat; background-size: cover;">
+                EAST x111</p>
+            <p class="item" id="out-west-16"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                WEST x16</p>
+            <p class="item"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                SPACING x16</p>
+            <p class="item" id="out-east-16"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                EAST x16</p>
+
+            <p class="item" id="out-west-1"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                WEST x1</p>
+            <p class="item"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                SPACING x1</p>
+            <p class="item" id="out-east-1"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                EAST x1</p>
+
+                <p class="item"></p>
+
+            <p class="item" id="out-south-111"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/block/cobblestone.png); background-repeat: no-repeat; background-size: cover;">
+                SOUTH x111</p>
+            <p class="item"></p>
+            <p class="item"></p>
+            <p class="item" id="out-south-16"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                SOUTH x16</p>
+            <p class="item"></p>
+            <p class="item"></p>
+            <p class="item" id="out-south-1"
+                style="background: url(https://assets.mcasset.cloud/1.20.1/assets/minecraft/textures/item/snowball.png); background-repeat: no-repeat; background-size: cover;">
+                SOUTH x1</p>
+            <p class="item"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        const sides = ["west", "north", "east", "south"]
+        var enabledSides = []
+        // side-enabled, side-111, side-16, side-1
+        // out-side-111, out-side-16, out-side-1
+        sides.map(side => {
+            document.querySelector(`#${side}-enabled`).addEventListener("change", (e) => {
+                console.log(side, e.target.checked)
+                enabledSides = sides.filter(side => document.querySelector(`#${side}-enabled`).checked)
+                sides.forEach(side_ => {
+                    let isEnabled = document.querySelector(`#${side_}-enabled`).checked
+                    if (isEnabled) {
+                        ['111', '16', '1'].map(x => {
+                            document.querySelector(`#out-${side_}-${x}`).textContent = document.querySelector(`#${side_}-${x}`).value
+                        })
+                    }
+                    else {
+                        ['111', '16', '1'].map(x => {
+                            document.querySelector(`#out-${side_}-${x}`).textContent = `${side_.toUpperCase()} x${x}`
+                        })
+                    }
+
+                })
+            });
+            ['111', '16', '1'].map(x => {
+                console.log(side, x)
+                document.querySelector(`#${side}-${x}`).addEventListener("input", (e) => {
+                    let isEnabled = document.querySelector(`#${side}-enabled`).checked
+
+                    if (isEnabled) {
+                        document.querySelector(`#out-${side}-${x}`).textContent = e.target.value
+                    }
+                    
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
